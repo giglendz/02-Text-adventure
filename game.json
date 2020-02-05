@@ -1,22 +1,115 @@
 {
 	"START": {
-		"name": "",
-		"desc": "",
+		"name": "North Bedroom",
+		"desc": "You wake up in a hard bed, your back aches from the poor quality of the mattress.  Unable to get back to sleep, you get out of bed.  To your left is a porthole, at the foot of the bed in a small bathroom, and to the right is the door leading into the hallway.",
 		"exits": [
 			{
-				"exit": "EXIT1",
-				"target": "LOCATION2"
+				"exit": "PORTHOLE",
+				"target": "PORTHOLE"
+			
+			}, {
+				"exit": "BATHROOM",
+				"target": "BATHROOM"
+			}, {
+				"exit": "DOOR",
+				"target": "HALLWAY"
 			}
 		]
-	}
-	,"LOCATION2": {
-		"name": "",
-		"desc": "",
+	},
+	"PORTHOLE": {
+		"name": "Porthole",
+		"desc": "You open the small porthole window, feeling the salty air against your face.",
 		"exits": [
 			{
-				"exit": "EXIT1",
-				"target": "START"
+				"exit": "BATHROOM",
+				"target": "BATHROOM"
+			}, {
+				"exit": "DOOR",
+				"target": "HALLWAY"
 			}
 		]
-	}
+	},
+	"BATHROOM": {
+		"name": "Small Bathroom",
+		"desc": "Just a small bathroom, a small mirror sits above a sink, and to the left is a shower you've barely used this entire trip.",
+		"exits": [
+			{
+				"exit": "PORTHOLE",
+				"target": "PORTHOLE"
+			},	{
+				"exit": "DOOR",
+				"target": "HALLWAY"
+			}
+		]
+	},
+		"HALLWAY": {
+			"name": "HALLWAY",
+			"desc": "As you exit the room, you see all the doors across the hall are open and empty.  A dining room sits to your left.",
+			"exits": [
+				{
+					"exit": "DINING ROOM",
+					"target": "DINING ROOM"
+				}
+			]
+		},
+		"DINING ROOM": {
+			"name": "Dining Room",
+			"desc": "This dining room is fancier than one's you're used to.  However, the usually meticulous room is messy, a few chairs having been pushed down.  You see stairs leading up to the top deck.",
+			"exits": [
+				{
+					"exit": "UP",
+					"target": "TOP DECK"
+				}
+			]
+		},
+		"TOP DECK": {
+			"name": "Top Deck",
+			"desc": "The air up on the top deck is chilly, and you wish you had thought to bring a jacket.  All around you, fellow passengers scramble around.  You see a group of sailors standing on the portside, looking down.",
+			"exits": [
+				{
+					"exit": "PORTSIDE",
+					"target": "PORTSIDE"
+				}
+			]
+		},
+		"PORTSIDE": {
+			"name": "Portside",
+			"desc": "You join the sailors, looking down at a very apparent hole in the side of the ship.  You turn to leave, knowing it's time to get to the lifeboats.",
+			"exits": [
+				{
+					"exit": "LIFEBOAT",
+					"target": "LIFEBOAT"
+				}
+			]
+		},
+		"LIFEBOAT": {
+			"name": "Lifeboat",
+			"desc": "As you reach the lifeboat, you panic, seeing that it's already full.  A sailor rushes up to you, and points you to a second lifeboat",
+			"exits": [
+				{
+					"exit": "SECOND LIFEBOAT",
+					"target": "SECOND LIFEBOAT"
+				}
+			]
+		},
+		"SECOND LIFEBOAT": {
+			"name": "Second Lifeboat",
+			"desc": "You climb onto the second lifeboat, around you are fellow passengers and one of the sailors from before.  He yells at everyone to pull on the ropes to lower the lifeboat into the ocean.",
+			"exits": [
+				{
+					"exit": "PULL",
+					"target": "OCEAN"
+				}
+			]
+		},
+		"OCEAN": {
+			"name": "Ocean",
+			"desc": "As yoour boat falls into the ocean, you watch in silence as the large boat you were on moments ago sinks rapidly into the ocean.  You guess it's a good thing your mattress was so uncomfortable.",
+			"exits": [
+				{
+					"exit": "",
+					"target": ""
+				}
+			]
+		}
 }
